@@ -1,0 +1,20 @@
+{
+  "name": "back-end-praticas",
+  "version": "1.0.0",
+  "description": "Estas são as praticas da materia de Back-End do professor Reginaldo'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herculanodev/back-end-praticas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herculanodev/back-end-praticas/issues"
+  },
+  "homepage": "https://github.com/herculanodev/back-end-praticas#readme"
+}
