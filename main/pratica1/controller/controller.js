@@ -1,71 +1,63 @@
-const Contatos = require ('../modelo');
-let ultimoId = 0;
-const contatos = [];
+const Contacts = require('../model'); // Assuming you also rename the 'modelo.js' file to 'model.js'
+let lastId = 0;
+const contacts = [];
 
-function adicionarContato(name, email, telephone){
-    ultimoId++
-    const novoContato =  new Contatos(ultimoId, name,email, telephone);
-    contatos.push(novoContato)
+function addContact(name, email, telephone) {
+    lastId++;
+    const newContact = new Contacts(lastId, name, email, telephone);
+    contacts.push(newContact);
 }
 
-function listarContatos(){
-    if (contatos.length > 0){
-        console.log(`Lista de Contatos`);
-        contatos.forEach((contato, index) => {
-         console.log(`ID ${contato.id}. Nome: ${contato.name} , email: ${contato.email},  numero: ${contato.telephone}`)
- 
+function listContacts() {
+    if (contacts.length > 0) {
+        console.log(`Contact List:`);
+        contacts.forEach((contact) => {
+            console.log(`ID ${contact.id}. Name: ${contact.name}, Email: ${contact.email}, Phone: ${contact.telephone}`);
         });
-    }else{
-        console.log(`nao ha contatos`)
+    } else {
+        console.log(`There are no contacts.`);
         return null;
-
     }
 }
-     function buscarId(id){
-        const contato = contatos.find(contato => contato.id === id);
-        if(contato){
-            console.log(`Contato encontrado: id: ${contato.id}, nome: ${contato.name} e email: ${contato.email}`)
-            return contato;
 
-        }else{
-            console.log('contato nao encontrado')
-            return null;
-        }
-     }
-     function atualizarContato(id, name, email, telephone){
-        const index = contatos.findIndex(contato => contato.id === id);
-        if(index !== -1){
-            contatos[index].name = name;
-            contatos[index].email = email;
-            contatos[index].telephone = telephone;
-            console.log(`contato atualizado`)
-
-        } else{
-            console.log(`contato nao encontrado`)
-        }     
-       }
-
-       function removerContato(id){
-        const index = contatos.findIndex(contatos => contatos.id === id)
-        if(index !== -1){
-            contatos.splice(index, 1);
-            console.log(`copntato com ID ${id} foi removido da lista de contatos`);
-            }else{
-                console.log(`contato nao encontrado`)
-            }
-
-       }
+function findContactById(id) {
+    const contact = contacts.find(contact => contact.id === id);
+    if (contact) {
+        console.log(`Contact found: ID: ${contact.id}, Name: ${contact.name}, Email: ${contact.email}`);
+        return contact;
+    } else {
+        console.log('Contact not found');
+        return null;
+    }
+}
+function updateContact(id, name, telephone) {
+    const index = contacts.findIndex(contact => contact.id === id);
+    if (index !== -1) {
+        // Atualiza apenas o nome e o telefone, mantém o email e o ID inalterados
+        contacts[index].name = name || contacts[index].name; // Atualiza o nome se fornecido
+        contacts[index].telephone = telephone || contacts[index].telephone; // Atualiza o telefone se fornecido
+        console.log(`Contact updated`);
+    } else {
+        console.log(`Contact not found`);
+    }
+}
 
 
+function removeContact(id) {
+    const index = contacts.findIndex(contact => contact.id === id);
+    if (index !== -1) {
+        contacts.splice(index, 1);
+        console.log(`Contact with ID ${id} was removed from the contact list.`);
+    } else {
+        console.log(`Contact not found`);
+    }
+}
 
-
-
-adicionarContato('Daniel', 'email@email.com', '99369936');
-adicionarContato('Ana', 'ana@email.com', '93939393');
-listarContatos()
-buscarId(1)
-atualizarContato(1,'daniel','email@email.com','94949494')
-listarContatos()
-removerContato(1)
-listarContatos()
- 
+module.exports = {
+    addContact,
+    removeContact,
+    updateContact,
+    findContactById,
+    listContacts,
+    lastId
+};
