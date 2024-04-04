@@ -17,7 +17,7 @@
     "url": "https://github.com/herculanodev/back-end-praticas/issues"
   },
   "homepage": "https://github.com/herculanodev/back-end-praticas#readme",
-  "dependencies": {
+  "devDependencies": {
     "nodemon": "^3.1.0"
   }
 }

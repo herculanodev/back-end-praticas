@@ -1,0 +1,47 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Testes da API Rest",
+    "dateExported": "2024-04-04T16:59:40.482Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8db833d5-0990-4c0d-b76e-056f31a34fd9",
+            "colId": "0cdda182-c2d3-44ec-a6f9-1a9d4616cc1b",
+            "containerId": "",
+            "name": "https://dummyjson.com/products/add",
+            "url": "https://dummyjson.com/add",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-04-04T16:58:07.827Z",
+            "modified": "2024-04-04T16:58:07.827Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"title\": \"Cafeteira Elétrica\",\r\n  \"description\": \"Cafeteira elétrica com capacidade para 12 xícaras, filtro permanente e sistema corta-pingo.\",\r\n  \"price\": 121.00\r\n\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ec099ad8-e1e5-47eb-ae01-bbb24d46f1ae",
+            "colId": "0cdda182-c2d3-44ec-a6f9-1a9d4616cc1b",
+            "containerId": "",
+            "name": "https://dummyjson.com/products/1.",
+            "url": "https://dummyjson.com/products/101",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-04-04T16:58:18.401Z",
+            "modified": "2024-04-04T16:58:18.401Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"title\": \"Smartphone 5G\",\r\n  \"description\": \"Smartphone de última geração com tela de 6.5 polegadas, 128GB de armazenamento interno e suporte a rede 5G. Câmera traseira tripla de alta resolução para fotos e vídeos profissionais.\",\r\n  \"price\": 999.99\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
