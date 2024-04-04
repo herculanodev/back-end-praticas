@@ -19,5 +19,8 @@
   "homepage": "https://github.com/herculanodev/back-end-praticas#readme",
   "devDependencies": {
     "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
