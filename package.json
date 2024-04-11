@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/herculanodev/back-end-praticas#readme",
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.0"
   },
   "dependencies": {
