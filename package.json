@@ -19,9 +19,11 @@
   "homepage": "https://github.com/herculanodev/back-end-praticas#readme",
   "devDependencies": {
     "jest": "^29.7.0",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "supertest": "^6.3.4"
   },
   "dependencies": {
+    "express-generator": "^4.16.1",
     "readline-sync": "^1.4.10"
   }
 }

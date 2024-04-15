@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const produtosRouter = require('./router'); // Certifique-se de que este caminho está correto
+const produtosRouter = require('./router'); 
 
 app.use(express.json());
 app.use('/produtos', produtosRouter);
